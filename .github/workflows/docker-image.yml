@@ -24,7 +24,7 @@ jobs:
     - name: Pull and push image to docker hub
       run: |
         docker build . --file Dockerfile --tag mrmayanger/nodejs:v1.${{ github.run_number }}.${GITHUB_ENV##*}
-        docker push tag mrmayanger/nodejs:v1.${{ github.run_number }}.${GITHUB_ENV##*}
+        docker push mrmayanger/nodejs:v1.${{ github.run_number }}.${GITHUB_ENV##*}
 
 
 
